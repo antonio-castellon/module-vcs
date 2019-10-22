@@ -1,6 +1,6 @@
 {
   "name": "@acastellon/vcs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Hash generator for files",
   "main": "vcs.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antonio-castellon/vcs.git"
+    "url": "git+https://github.com/antonio-castellon/module-vcs.git"
   },
   "keywords": [
     "hash",
@@ -18,7 +18,7 @@
   "author": "Antonio Castellon",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/antonio-castellon/vcs/issues"
+    "url": "https://github.com/antonio-castellon/module-vcs/issues"
   },
-  "homepage": "https://github.com/antonio-castellon/vcs#readme"
+  "homepage": "https://github.com/antonio-castellon/module-vcs#readme"
 }
