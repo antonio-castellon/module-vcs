@@ -1,7 +1,7 @@
 {
   "name": "@acastellon/vcs",
-  "version": "1.0.1",
-  "description": "Hash generator for files",
+  "version": "1.0.2",
+  "description": "Hash generator for files, Version Control based in content.",
   "main": "vcs.js",
   "scripts": {
     "test": "node test.js"

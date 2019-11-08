@@ -1,9 +1,10 @@
+"use strict";
 // -- version Control
 //
 // Castellon.CH - 2019 (c)
 // Author: Antonio Castellon - antonio@castellon.ch
 //
-// Generate a HASH from the sourcode of the file
+// Generate a HASH from the content of the file
 //
 
 const crypto = require('crypto');
@@ -22,7 +23,5 @@ function getHash(fileName){
 
 }
 
-function getBuildFile(fileName) {    return  fs.readFileSync(fileName, 'utf8');   }
-
 module.exports.getHash = getHash;
-module.exports.getBuildFile = getBuildFile;
+
