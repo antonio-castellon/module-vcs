@@ -1,6 +1,8 @@
 //
 // test module
 //
-const vcs = require('@acastellon/vcs');
+const { getHash } = require('@acastellon/vcs');
 
-vcs.getHash('./test.js').then(function(value) { console.log(value); });
+getHash('./test.js')
+  .then((value) => console.log(value))
+  .catch(console.error);
