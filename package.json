@@ -24,5 +24,11 @@
   "homepage": "https://github.com/antonio-castellon/module-vcs#readme",
   "engines": {
     "node": ">=18.0.0"
-  }
+  },
+  "files": [
+    "vcs.js",
+    "README.md",
+    "LICENSE",
+    "test.js"
+  ]
 }
