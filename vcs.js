@@ -12,8 +12,11 @@ const fs = require('fs');
 
 /**
  * Generate md5 hash from file content.
- * @param {string} fileName path to file
- * @returns {Promise<string>} hex digest
+ * Uses streaming to support large files without loading everything in memory.
+ *
+ * @param {string} fileName - Path to the file to hash
+ * @returns {Promise<string>} - Hex digest (32 chars for md5)
+ * @throws {Error} - On file read errors (e.g. ENOENT, permission)
  */
 function getHash(fileName) {
   return new Promise((resolve, reject) => {
