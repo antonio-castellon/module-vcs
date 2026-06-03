@@ -39,6 +39,27 @@ Generate md5 hash from file content using streaming (supports large files).
   ```
 - **Notes**: Uses crypto.createHash('md5') + fs.createReadStream. Idempotent for same content.
 
+**Minimal example (self-contained):**
+
+```js
+const vcs = require('@acastellon/vcs');
+const fs = require('fs');
+const path = require('path');
+
+// Create a temp file for demo (in real use you have your file)
+const testFile = path.join(__dirname, 'demo.txt');
+fs.writeFileSync(testFile, 'hello world');
+
+vcs.getHash(testFile)
+  .then(hash => {
+    console.log('Hash:', hash);
+    fs.unlinkSync(testFile);
+  })
+  .catch(err => {
+    console.error('Failed to hash:', err);
+  });
+```
+
 ## License
 
 MIT
