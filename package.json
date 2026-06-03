@@ -1,7 +1,7 @@
 {
   "name": "@acastellon/vcs",
-  "version": "1.1.0",
-  "description": "Hash generator for files, Version Control based in content.",
+  "version": "1.2.0",
+  "description": "Content-based versioning / hash generator for files, strings, buffers and directory trees. Real-time VCS without needing git access.",
   "main": "vcs.js",
   "scripts": {
     "test": "node test.js"
@@ -12,9 +12,14 @@
   },
   "keywords": [
     "hash",
+    "md5",
+    "sha256",
     "files",
-    "crypt",
-    "vcs"
+    "directory",
+    "content-hash",
+    "vcs",
+    "versioning",
+    "crypto"
   ],
   "author": "Antonio Castellon",
   "license": "MIT",
