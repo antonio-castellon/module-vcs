@@ -1,7 +1,7 @@
 "use strict";
-// -- version Control
+// -- Version Control
 //
-// Castellon.CH - 2019 (c)
+// Castellon.CH - 2019-2026 (c)
 // Author: Antonio Castellon - antonio@castellon.ch
 //
 // Generate a HASH from the content of the file
@@ -10,18 +10,19 @@
 const crypto = require('crypto');
 const fs = require('fs');
 
-function getHash(fileName){
-
-    return new Promise(function(resolve, reject){
-
-        var hash = crypto.createHash('md5');
-        var stream = fs.createReadStream(fileName);
-        stream.on('data', function (data) { hash.update(data, 'utf8') })
-        stream.on('end', function () { resolve(hash.digest('hex')); })
-    });
-
-
+/**
+ * Generate md5 hash from file content.
+ * @param {string} fileName path to file
+ * @returns {Promise<string>} hex digest
+ */
+function getHash(fileName) {
+  return new Promise((resolve, reject) => {
+    const hash = crypto.createHash('md5');
+    const stream = fs.createReadStream(fileName);
+    stream.on('data', (data) => hash.update(data));
+    stream.on('end', () => resolve(hash.digest('hex')));
+    stream.on('error', (err) => reject(err));
+  });
 }
 
-module.exports.getHash = getHash;
-
+module.exports = { getHash };

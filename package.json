@@ -1,6 +1,6 @@
 {
   "name": "@acastellon/vcs",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Hash generator for files, Version Control based in content.",
   "main": "vcs.js",
   "scripts": {
@@ -13,12 +13,16 @@
   "keywords": [
     "hash",
     "files",
-    "crypt"
+    "crypt",
+    "vcs"
   ],
   "author": "Antonio Castellon",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/antonio-castellon/module-vcs/issues"
   },
-  "homepage": "https://github.com/antonio-castellon/module-vcs#readme"
+  "homepage": "https://github.com/antonio-castellon/module-vcs#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }
