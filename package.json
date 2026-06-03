@@ -1,6 +1,6 @@
 {
   "name": "@acastellon/vcs",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Content-based versioning / hash generator for files, strings, buffers and directory trees. Real-time VCS without needing git access.",
   "main": "vcs.js",
   "scripts": {
